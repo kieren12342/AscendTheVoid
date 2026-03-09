@@ -36,7 +36,6 @@ func _ready() -> void:
 	_start_combat()
 
 func _start_combat() -> void:
-	GameManager.start_run("rift_walker", 0)
 	# Pick a random Act 1 non-boss enemy from DataLoader
 	var candidates: Array = []
 	for enemy in DataLoader.enemies:
@@ -188,6 +187,10 @@ func _on_victory() -> void:
 	restart_btn.visible = true
 	if not restart_btn.pressed.is_connected(_reload_scene):
 		restart_btn.pressed.connect(_reload_scene)
+	# Auto-transition back to map after 1.5s
+	await get_tree().create_timer(1.5).timeout
+	if is_instance_valid(self):
+		get_tree().change_scene_to_file("res://scenes/Map.tscn")
 
 func _on_defeat() -> void:
 	_combat_over = true
