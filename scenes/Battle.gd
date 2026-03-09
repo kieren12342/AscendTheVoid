@@ -7,6 +7,7 @@ extends Node2D
 @onready var energy_label: Label = $UI/Root/PlayerArea/PlayerRow/EnergyBlock/EnergyLabel
 @onready var end_turn_btn: Button = $UI/Root/PlayerArea/PlayerRow/EnergyBlock/EndTurnButton
 @onready var overlay_label: Label = $UI/Root/OverlayLabel
+@onready var restart_btn: Button = $UI/Root/RestartButton
 
 var card_scene = preload("res://scenes/CardUI.tscn")
 var _dragged_card = null
@@ -120,41 +121,87 @@ func _on_end_turn() -> void:
 	if _combat_over:
 		return
 	end_turn_btn.disabled = true
+
+	# Exhaust ethereal cards before end of turn
+	for card in GameManager.hand.duplicate():
+		if card.get("ethereal", false):
+			GameManager.hand.erase(card)
+			GameManager.exhaust_pile.append(card)
+			EventBus.card_exhausted.emit(card)
+
+	# Tick player statuses
+	StatusManager.tick_player_end_of_turn()
+
+	# Discard remaining hand and reset energy
 	GameManager.end_turn()
-	# Enemy turn
+
+	# Enemy turn: resolve intent (player block absorbs damage)
 	var intent_type: String = _enemy_current_intent.get("type", "")
 	if intent_type == "ATTACK" or intent_type == "ATTACK_DEFEND":
-		var damage: int = _enemy_current_intent.get("damage", 0)
+		var base_dmg: int = _enemy_current_intent.get("damage", 0)
+		var damage: int = ModifierSystem.calc_enemy_damage(
+			base_dmg,
+			StatusManager.enemy_statuses[0],
+			StatusManager.player_statuses
+		)
+		# Player block absorbs damage before HP
 		var leftover: int = max(damage - GameManager._player_block, 0)
 		GameManager._player_block = max(GameManager._player_block - damage, 0)
 		if leftover > 0:
 			GameManager.take_damage(leftover)
 	if intent_type == "DEFEND" or intent_type == "ATTACK_DEFEND":
-		_enemy_block += _enemy_current_intent.get("block", 0)
-	await get_tree().create_timer(0.4).timeout
-	if _combat_over:
+		var base_blk: int = _enemy_current_intent.get("block", 0)
+		_enemy_block += ModifierSystem.calc_player_block(base_blk, StatusManager.enemy_statuses[0])
+
+	# Tick enemy statuses (handles poison damage)
+	_enemy_hp = StatusManager.tick_enemy_end_of_turn(0, _enemy_hp)
+	if _enemy_hp <= 0:
+		_enemy_hp = 0
+		_refresh_enemy_ui()
+		_on_victory()
 		return
+
+	# Enemy block decays to 0 after enemy acts
 	_enemy_block = 0
+
+	# Decay player block to 0 (does NOT carry over between rounds)
+	_player_block = 0
+	GameManager._player_block = 0
+	EventBus.block_applied.emit("player", 0)
+
+	# Pick new intent and refresh UI
 	_enemy_current_intent = _pick_enemy_intent()
 	_refresh_enemy_ui()
-	end_turn_btn.disabled = false
+
+	# Start new player turn
 	GameManager.start_turn()
-	_player_block = 0
-	block_label.text = "🛡 0"
+	end_turn_btn.disabled = false
 
 func _on_victory() -> void:
 	_combat_over = true
 	end_turn_btn.disabled = true
-	overlay_label.text = "⚔ VICTORY!"
+	overlay_label.text = "⚔ VICTORY!\n+50 Gold"
 	overlay_label.modulate = Color.GREEN
 	overlay_label.visible = true
+	GameManager.gain_gold(50)
+	restart_btn.text = "Play Again"
+	restart_btn.visible = true
+	if not restart_btn.pressed.is_connected(_reload_scene):
+		restart_btn.pressed.connect(_reload_scene)
 
 func _on_defeat() -> void:
 	_combat_over = true
 	end_turn_btn.disabled = true
-	overlay_label.text = "💀 DEFEAT"
+	overlay_label.text = "💀 DEFEAT\nGame Over"
 	overlay_label.modulate = Color.RED
 	overlay_label.visible = true
+	restart_btn.text = "Try Again"
+	restart_btn.visible = true
+	if not restart_btn.pressed.is_connected(_reload_scene):
+		restart_btn.pressed.connect(_reload_scene)
+
+func _reload_scene() -> void:
+	get_tree().reload_current_scene()
 
 func _on_drag_started(pos: Vector2, _source: String) -> void:
 	for card in card_container.get_children():
