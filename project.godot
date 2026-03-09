@@ -14,6 +14,8 @@ run/main_scene="res://scenes/Battle.tscn"
 [autoload]
 
 EventBus="*res://autoload/EventBus.gd"
+ModifierSystem="*res://autoload/ModifierSystem.gd"
+StatusManager="*res://autoload/StatusManager.gd"
 DataLoader="*res://autoload/DataLoader.gd"
 InputManager="*res://autoload/InputManager.gd"
 GameManager="*res://autoload/GameManager.gd"
