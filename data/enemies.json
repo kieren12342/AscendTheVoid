@@ -86,6 +86,32 @@
     ]
   },
   {
+    "id": "shadow_bat",
+    "enemy_name": "Shadow Bat",
+    "max_hp_min": 28,
+    "max_hp_max": 35,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 5, "times": 1, "condition": "default" },
+      { "type": "DEBUFF", "status": "weak", "stacks": 1, "condition": "turn_2" }
+    ]
+  },
+  {
+    "id": "void_crawler",
+    "enemy_name": "Void Crawler",
+    "max_hp_min": 32,
+    "max_hp_max": 40,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 7, "times": 1, "condition": "default" },
+      { "type": "ATTACK", "damage": 4, "times": 2, "condition": "turn_3" }
+    ]
+  },
+  {
     "id": "stellar_shade",
     "enemy_name": "Stellar Shade",
     "max_hp_min": 50,
