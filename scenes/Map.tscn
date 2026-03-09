@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://map"]
+
+[ext_resource type="Script" path="res://scenes/Map.gd" id="1_map"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_map")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Root" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActLabel" type="Label" parent="UI/Root"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.08
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Act 1 — Choose Your Path"
+
+[node name="MapScroll" type="ScrollContainer" parent="UI/Root"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.08
+anchor_right = 1.0
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapVBox" type="VBoxContainer" parent="UI/Root/MapScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NodeInfoLabel" type="Label" parent="UI/Root"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+text = ""
