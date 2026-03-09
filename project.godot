@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; but the file format is INI, and target/value pairs can be edited manually.
+; Modification date: 2026-03-09
+
+config_version=5
+
+[application]
+
+config/name="AscendTheVoid"
+config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene=""
+
+[autoload]
+
+EventBus="*res://autoload/EventBus.gd"
+GameManager="*res://autoload/GameManager.gd"
+SaveSystem="*res://autoload/SaveSystem.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
+renderer/rendering_method="forward_plus"

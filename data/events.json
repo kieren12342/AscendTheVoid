@@ -1,0 +1,215 @@
+[
+  {
+    "id": "the_rift_merchant",
+    "event_name": "The Rift Merchant",
+    "description": "A shimmering figure offers you a deal across the void...",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Pay 75 gold for a rare card.",
+        "condition": "gold >= 75",
+        "effects": [
+          { "type": "lose_gold", "amount": 75 },
+          { "type": "gain_card", "rarity": "RARE" }
+        ]
+      },
+      {
+        "text": "Pay 50 gold for a common relic.",
+        "condition": "gold >= 50",
+        "effects": [
+          { "type": "lose_gold", "amount": 50 },
+          { "type": "gain_relic", "rarity": "COMMON" }
+        ]
+      },
+      {
+        "text": "Leave.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "the_void_altar",
+    "event_name": "The Void Altar",
+    "description": "An ancient altar pulses with eldritch light. What do you offer?",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Sacrifice 10 HP to gain 2 Strength for this combat.",
+        "effects": [
+          { "type": "lose_hp", "amount": 10 },
+          { "type": "gain_buff", "status": "strength", "stacks": 2 }
+        ]
+      },
+      {
+        "text": "Offer a card from your hand (remove it permanently).",
+        "effects": [
+          { "type": "remove_card_from_deck" }
+        ]
+      },
+      {
+        "text": "Ignore the altar.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "dimensional_rift",
+    "event_name": "Dimensional Rift",
+    "description": "A rift in space tears open before you. Portals flicker with possibility.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Reach through and grab something (gain a random relic, lose 15 HP).",
+        "effects": [
+          { "type": "lose_hp", "amount": 15 },
+          { "type": "gain_relic", "rarity": "RANDOM" }
+        ]
+      },
+      {
+        "text": "Step through to find a shortcut (skip 1 floor).",
+        "effects": [
+          { "type": "skip_floor" }
+        ]
+      },
+      {
+        "text": "Close the rift (gain 30 gold).",
+        "effects": [
+          { "type": "gain_gold", "amount": 30 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wandering_scholar",
+    "event_name": "Wandering Scholar",
+    "description": "A mad scholar mutters formulae of the void. He offers his knowledge—for a price.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Study with him (upgrade a card in your deck).",
+        "condition": "gold >= 50",
+        "effects": [
+          { "type": "lose_gold", "amount": 50 },
+          { "type": "upgrade_card" }
+        ]
+      },
+      {
+        "text": "Ask about relics (gain a common relic for free).",
+        "effects": [
+          { "type": "gain_relic", "rarity": "COMMON" }
+        ]
+      },
+      {
+        "text": "Ignore him.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "cosmic_well",
+    "event_name": "Cosmic Well",
+    "description": "A well of glowing void energy stretches into eternity. Its power calls to you.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Drink deeply (gain 20 max HP, lose 5 current HP).",
+        "effects": [
+          { "type": "gain_max_hp", "amount": 20 },
+          { "type": "lose_hp", "amount": 5 }
+        ]
+      },
+      {
+        "text": "Sip carefully (heal 15 HP).",
+        "effects": [
+          { "type": "heal_hp", "amount": 15 }
+        ]
+      },
+      {
+        "text": "Fill a vial (gain 1 potion).",
+        "effects": [
+          { "type": "gain_potion", "potion_id": "void_potion" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the_trapped_void",
+    "event_name": "The Trapped Void",
+    "description": "A creature made of pure void writhes in chains. It pleads for release.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Free it (gain a rare relic, it may return as an enemy later).",
+        "effects": [
+          { "type": "gain_relic", "rarity": "RARE" },
+          { "type": "flag", "id": "freed_void_creature" }
+        ]
+      },
+      {
+        "text": "Destroy it (gain 50 gold, gain 10 max HP).",
+        "effects": [
+          { "type": "gain_gold", "amount": 50 },
+          { "type": "gain_max_hp", "amount": 10 }
+        ]
+      },
+      {
+        "text": "Leave it.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "shattered_mirror",
+    "event_name": "Shattered Mirror",
+    "description": "A mirror shows infinite reflections of yourself, each with a different path taken.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Touch the mirror (copy a card in your hand, add it to your deck).",
+        "effects": [
+          { "type": "copy_hand_card" }
+        ]
+      },
+      {
+        "text": "Smash it (remove a card from your deck).",
+        "effects": [
+          { "type": "remove_card_from_deck" }
+        ]
+      },
+      {
+        "text": "Ignore it.",
+        "effects": []
+      }
+    ]
+  },
+  {
+    "id": "void_blessing",
+    "event_name": "Void Blessing",
+    "description": "A disembodied voice speaks in frequencies that reshape reality. It offers a gift.",
+    "act": 0,
+    "choices": [
+      {
+        "text": "Accept the blessing (upgrade a random card in your deck).",
+        "effects": [
+          { "type": "upgrade_random_card" }
+        ]
+      },
+      {
+        "text": "Ask for gold (gain 40 gold).",
+        "effects": [
+          { "type": "gain_gold", "amount": 40 }
+        ]
+      },
+      {
+        "text": "Demand healing (heal 25 HP).",
+        "effects": [
+          { "type": "heal_hp", "amount": 25 }
+        ]
+      },
+      {
+        "text": "Reject the blessing.",
+        "effects": []
+      }
+    ]
+  }
+]

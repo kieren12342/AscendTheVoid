@@ -1,0 +1,145 @@
+[
+  {
+    "id": "void_wisp",
+    "enemy_name": "Void Wisp",
+    "max_hp_min": 40,
+    "max_hp_max": 47,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 6, "times": 1, "condition": "default" },
+      { "type": "DEFEND", "block": 5, "condition": "hp_below_half" }
+    ]
+  },
+  {
+    "id": "rift_spawn",
+    "enemy_name": "Rift Spawn",
+    "max_hp_min": 35,
+    "max_hp_max": 42,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 8, "times": 1, "condition": "default" },
+      { "type": "ATTACK", "damage": 4, "times": 2, "condition": "turn_3" }
+    ]
+  },
+  {
+    "id": "cosmic_moth",
+    "enemy_name": "Cosmic Moth",
+    "max_hp_min": 30,
+    "max_hp_max": 38,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "DEBUFF", "status": "weak", "stacks": 2, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 7, "times": 1, "condition": "default" },
+      { "type": "ATTACK", "damage": 5, "times": 2, "condition": "hp_below_half" }
+    ]
+  },
+  {
+    "id": "void_sentinel",
+    "enemy_name": "Void Sentinel",
+    "max_hp_min": 60,
+    "max_hp_max": 68,
+    "act": 1,
+    "is_elite": true,
+    "is_boss": false,
+    "intents": [
+      { "type": "DEFEND", "block": 12, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 14, "times": 1, "condition": "turn_2" },
+      { "type": "ATTACK_DEFEND", "damage": 8, "block": 8, "condition": "default" },
+      { "type": "BUFF", "status": "strength", "stacks": 2, "condition": "hp_below_half" }
+    ]
+  },
+  {
+    "id": "eldritch_horror",
+    "enemy_name": "Eldritch Horror",
+    "max_hp_min": 55,
+    "max_hp_max": 65,
+    "act": 1,
+    "is_elite": true,
+    "is_boss": false,
+    "intents": [
+      { "type": "DEBUFF", "status": "vulnerable", "stacks": 2, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 12, "times": 1, "condition": "default" },
+      { "type": "ATTACK", "damage": 8, "times": 2, "condition": "turn_3" },
+      { "type": "BUFF", "status": "strength", "stacks": 3, "condition": "hp_below_third" }
+    ]
+  },
+  {
+    "id": "the_void_herald_boss",
+    "enemy_name": "The Void Herald",
+    "max_hp_min": 140,
+    "max_hp_max": 148,
+    "act": 1,
+    "is_elite": false,
+    "is_boss": true,
+    "intents": [
+      { "type": "BUFF", "status": "strength", "stacks": 3, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 16, "times": 1, "condition": "turn_2" },
+      { "type": "DEBUFF", "status": "vulnerable", "stacks": 2, "condition": "turn_3" },
+      { "type": "ATTACK", "damage": 10, "times": 2, "condition": "default" },
+      { "type": "DEFEND", "block": 18, "condition": "hp_below_half" }
+    ]
+  },
+  {
+    "id": "stellar_shade",
+    "enemy_name": "Stellar Shade",
+    "max_hp_min": 50,
+    "max_hp_max": 58,
+    "act": 2,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 9, "times": 1, "condition": "default" },
+      { "type": "DEBUFF", "status": "poison", "stacks": 3, "condition": "hp_below_half" }
+    ]
+  },
+  {
+    "id": "entropy_wisp",
+    "enemy_name": "Entropy Wisp",
+    "max_hp_min": 45,
+    "max_hp_max": 52,
+    "act": 2,
+    "is_elite": false,
+    "is_boss": false,
+    "intents": [
+      { "type": "ATTACK", "damage": 7, "times": 2, "condition": "default" },
+      { "type": "DEBUFF", "status": "weak", "stacks": 2, "condition": "turn_2" }
+    ]
+  },
+  {
+    "id": "null_construct",
+    "enemy_name": "Null Construct",
+    "max_hp_min": 70,
+    "max_hp_max": 80,
+    "act": 2,
+    "is_elite": true,
+    "is_boss": false,
+    "intents": [
+      { "type": "DEFEND", "block": 15, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 18, "times": 1, "condition": "turn_2" },
+      { "type": "BUFF", "status": "metallicize", "stacks": 4, "condition": "turn_3" },
+      { "type": "ATTACK", "damage": 12, "times": 1, "condition": "default" }
+    ]
+  },
+  {
+    "id": "the_rift_sovereign_boss",
+    "enemy_name": "The Rift Sovereign",
+    "max_hp_min": 200,
+    "max_hp_max": 210,
+    "act": 2,
+    "is_elite": false,
+    "is_boss": true,
+    "intents": [
+      { "type": "BUFF", "status": "artifact", "stacks": 1, "condition": "turn_1" },
+      { "type": "ATTACK", "damage": 20, "times": 1, "condition": "turn_2" },
+      { "type": "DEBUFF", "status": "vulnerable", "stacks": 3, "condition": "turn_3" },
+      { "type": "ATTACK", "damage": 12, "times": 2, "condition": "default" },
+      { "type": "BUFF", "status": "strength", "stacks": 4, "condition": "hp_below_half" }
+    ]
+  }
+]
