@@ -1,9 +1,18 @@
+# // CROSS-PLATFORM READY – Steam + mobile
 extends Node
 
+## InputManager — handles mouse drag AND touch drag for card interactions.
+## Emits card_drag_started, card_drag_moved, card_drag_ended on both PC and phone.
+
+signal card_drag_started(position: Vector2, source: String)
+signal card_drag_moved(position: Vector2, source: String)
+signal card_drag_ended(position: Vector2, source: String)
+signal tap(position: Vector2)
+
+# Legacy aliases so any existing code connecting drag_started/moved/ended still works
 signal drag_started(position: Vector2, source: String)
 signal drag_moved(position: Vector2, source: String)
 signal drag_ended(position: Vector2, source: String)
-signal tap(position: Vector2)
 
 var _dragging: bool = false
 var _drag_start: Vector2 = Vector2.ZERO
@@ -18,6 +27,7 @@ func _input(event: InputEvent) -> void:
 				_dragging = false
 			else:
 				if _dragging:
+					card_drag_ended.emit(event.position, "mouse")
 					drag_ended.emit(event.position, "mouse")
 					_dragging = false
 				else:
@@ -26,8 +36,10 @@ func _input(event: InputEvent) -> void:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			if not _dragging and event.position.distance_to(_drag_start) > _drag_threshold:
 				_dragging = true
+				card_drag_started.emit(_drag_start, "mouse")
 				drag_started.emit(_drag_start, "mouse")
 			if _dragging:
+				card_drag_moved.emit(event.position, "mouse")
 				drag_moved.emit(event.position, "mouse")
 	elif event is InputEventScreenTouch:
 		if event.pressed and _touch_index == -1:
@@ -37,6 +49,7 @@ func _input(event: InputEvent) -> void:
 		elif not event.pressed and event.index == _touch_index:
 			_touch_index = -1
 			if _dragging:
+				card_drag_ended.emit(event.position, "touch")
 				drag_ended.emit(event.position, "touch")
 				_dragging = false
 			else:
@@ -45,6 +58,8 @@ func _input(event: InputEvent) -> void:
 		if event.index == _touch_index:
 			if not _dragging and event.position.distance_to(_drag_start) > _drag_threshold:
 				_dragging = true
+				card_drag_started.emit(_drag_start, "touch")
 				drag_started.emit(_drag_start, "touch")
 			if _dragging:
+				card_drag_moved.emit(event.position, "touch")
 				drag_moved.emit(event.position, "touch")
