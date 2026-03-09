@@ -206,3 +206,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text = ""
 visible = false
+
+[node name="RestartButton" type="Button" parent="UI/Root"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+grow_horizontal = 2
+grow_vertical = 2
+custom_minimum_size = Vector2(200, 70)
+theme_override_font_sizes/font_size = 22
+text = "Play Again"
+visible = false

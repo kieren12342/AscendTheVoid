@@ -526,5 +526,27 @@
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
     "tags": ["energy", "draw", "colorless", "exhaust"]
+  },
+  {
+    "id": "fading_shield",
+    "card_name": "Fading Shield",
+    "description": "Gain !B! Block. Ethereal.",
+    "upgraded_description": "Gain !B! Block. Ethereal.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": true,
+    "innate": false,
+    "champion_id": "rift_walker",
+    "base_damage": 0,
+    "base_block": 7,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 10,
+    "upgraded_magic_number": -1,
+    "tags": ["block", "ethereal"]
   }
 ]
