@@ -1,3 +1,4 @@
+# // CROSS-PLATFORM READY – Steam + mobile
 extends Node
 
 # GameManager — run state singleton. Tracks all state for an active run.
