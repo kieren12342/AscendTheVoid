@@ -9,11 +9,13 @@ config_version=5
 
 config/name="AscendTheVoid"
 config/features=PackedStringArray("4.3", "Forward Plus")
-run/main_scene=""
+run/main_scene="res://scenes/Battle.tscn"
 
 [autoload]
 
 EventBus="*res://autoload/EventBus.gd"
+DataLoader="*res://autoload/DataLoader.gd"
+InputManager="*res://autoload/InputManager.gd"
 GameManager="*res://autoload/GameManager.gd"
 SaveSystem="*res://autoload/SaveSystem.gd"
 
