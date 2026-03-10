@@ -207,10 +207,10 @@ func _show_reward_screen() -> void:
 	var reward_scene = preload("res://scenes/RewardScreen.tscn")
 	var reward = reward_scene.instantiate()
 	# Pick 3 random relics not already held
-	var available := DataLoader.relics.filter(func(r): return not RelicManager.has_relic(r.get("id", "")))
+	var available: Array = DataLoader.relics.filter(func(r): return not RelicManager.has_relic(r.get("id", "")))
 	available.shuffle()
-	var offered := available.slice(0, min(3, available.size()))
-	var offered_ids := offered.map(func(r): return r.get("id", ""))
+	var offered: Array = available.slice(0, min(3, available.size()))
+	var offered_ids: Array = offered.map(func(r): return r.get("id", ""))
 	reward.setup(offered_ids, func(): get_tree().change_scene_to_file("res://scenes/Map.tscn"))
 	add_child(reward)
 

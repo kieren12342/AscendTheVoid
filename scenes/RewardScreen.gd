@@ -19,7 +19,7 @@ func _build_relic_choices() -> void:
 	for child in relic_row.get_children():
 		child.queue_free()
 	for relic_id in _offered_relics:
-		var relic_data := DataLoader.get_relic(relic_id)
+		var relic_data: Dictionary = DataLoader.get_relic(relic_id)
 		if relic_data.is_empty():
 			continue
 		var btn := Button.new()
@@ -30,7 +30,7 @@ func _build_relic_choices() -> void:
 			rarity
 		]
 		btn.custom_minimum_size = Vector2(180, 120)
-		btn.theme_override_font_sizes["font_size"] = 12
+		btn.add_theme_font_size_override("font_size", 12)
 		var rid: String = relic_id
 		btn.pressed.connect(func(): _pick_relic(rid))
 		relic_row.add_child(btn)
