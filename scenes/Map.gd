@@ -42,7 +42,7 @@ func _build_map_ui(map: Dictionary) -> void:
 		child.queue_free()
 
 	# Update relic display
-	var relic_names := RelicManager.active_relics.map(func(r): return r.get("name", r.get("id", "Unknown")))
+	var relic_names: Array = RelicManager.active_relics.map(func(r): return r.get("name", r.get("id", "Unknown")))
 	if relic_names.is_empty():
 		relic_bar.text = "Relics: None"
 	else:
@@ -78,7 +78,7 @@ func _build_map_ui(map: Dictionary) -> void:
 
 			# Capture loop vars for closure
 			var floor_idx := f
-			var col_idx := node_data.get("col", 0)
+			var col_idx: int = node_data.get("col", 0)
 			btn.pressed.connect(func(): _on_map_node_pressed(floor_idx, col_idx))
 			hbox.add_child(btn)
 

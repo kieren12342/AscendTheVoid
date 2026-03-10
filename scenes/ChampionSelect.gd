@@ -46,7 +46,7 @@ func _ready() -> void:
 	var slots := ["Champion1", "Champion2", "Champion3", "Champion4"]
 
 	for i in range(CHAMPIONS.size()):
-		var champ_data := CHAMPIONS[i]
+		var champ_data: Dictionary = CHAMPIONS[i]
 		var slot: VBoxContainer = champion_row.get_node(slots[i])
 		var btn: Button = slot.get_node("SelectBtn")
 		var name_lbl: Label = slot.get_node("NameLabel")
