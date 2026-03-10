@@ -31,7 +31,7 @@ func _build_relic_choices() -> void:
 		]
 		btn.custom_minimum_size = Vector2(180, 120)
 		btn.theme_override_font_sizes["font_size"] = 12
-		var rid := relic_id
+		var rid: String = relic_id
 		btn.pressed.connect(func(): _pick_relic(rid))
 		relic_row.add_child(btn)
 

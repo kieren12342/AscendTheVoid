@@ -44,14 +44,14 @@ func tick_statuses(statuses: Dictionary, is_player: bool) -> Dictionary:
 	var result := statuses.duplicate()
 	# Poison: deal stacks damage, then reduce by 1
 	if result.get("poison", 0) > 0:
-		var poison_dmg := result["poison"]
+		var poison_dmg: int = result["poison"]
 		if is_player:
 			GameManager.take_damage(poison_dmg)
 		# caller handles enemy poison damage
 		result["poison"] = max(result["poison"] - 1, 0)
 	# Burn: deal stacks damage, then reduce by 1
 	if result.get("burn", 0) > 0:
-		var burn_dmg := result["burn"]
+		var burn_dmg: int = result["burn"]
 		if is_player:
 			GameManager.take_damage(burn_dmg)
 		# caller handles enemy burn damage
