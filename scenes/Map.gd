@@ -105,7 +105,7 @@ func _on_map_node_pressed(floor_idx: int, col_idx: int) -> void:
 		"EVENT":
 			var events := DataLoader.events
 			if events.size() > 0:
-				var event_data: Dictionary = events[GameManager.rng.randi_range(0, events.size()-1)]
+				var event_data: Dictionary = events.pick_random()
 				var event_scene = preload("res://scenes/EventScreen.tscn")
 				var event_instance = event_scene.instantiate()
 				event_instance.setup(event_data, func(): pass)
