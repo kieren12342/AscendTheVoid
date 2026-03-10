@@ -22,11 +22,11 @@ func _build_shop() -> void:
 		child.queue_free()
 
 	# Offer 3 random relics for purchase
-	var available_relics := DataLoader.relics.filter(
+	var available_relics: Array = DataLoader.relics.filter(
 		func(r): return not RelicManager.has_relic(r.get("id",""))
 	)
 	available_relics.shuffle()
-	var shop_relics := available_relics.slice(0, min(3, available_relics.size()))
+	var shop_relics: Array = available_relics.slice(0, min(3, available_relics.size()))
 
 	for relic in shop_relics:
 		var price := _relic_price(relic.get("rarity","COMMON"))
@@ -37,7 +37,7 @@ func _build_shop() -> void:
 			price
 		]
 		btn.custom_minimum_size = Vector2(160, 130)
-		btn.theme_override_font_sizes["font_size"] = 11
+		btn.add_theme_font_size_override("font_size", 11)
 		btn.disabled = GameManager.gold < price
 		var rid: String = relic.get("id","")
 		var p := price
@@ -48,7 +48,7 @@ func _build_shop() -> void:
 	var potion_btn := Button.new()
 	potion_btn.text = "❤ HP Potion\nRestore 20 HP\n💰 50 Gold"
 	potion_btn.custom_minimum_size = Vector2(160, 130)
-	potion_btn.theme_override_font_sizes["font_size"] = 11
+	potion_btn.add_theme_font_size_override("font_size", 11)
 	potion_btn.disabled = GameManager.gold < 50
 	potion_btn.pressed.connect(_buy_hp_potion)
 	item_row.add_child(potion_btn)

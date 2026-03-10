@@ -73,7 +73,7 @@ func start_run(p_champion_id: String, seed: int = 0) -> void:
 	# Load champion defaults from data (sets base hp/energy/relic for legacy champions)
 	_load_champion_defaults(p_champion_id)
 	# Set champion HP based on selected champion (overrides defaults for new champions)
-	var champion_hp := {
+	var champion_hp: Dictionary = {
 		"void_warden": 80,
 		"shadow_lurker": 70,
 		"plasma_weaver": 68,

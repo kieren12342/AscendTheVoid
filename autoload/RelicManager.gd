@@ -7,7 +7,7 @@ func reset_for_run() -> void:
 	active_relics = []
 
 func add_relic(relic_id: String) -> void:
-	var relic_data := DataLoader.get_relic(relic_id)
+	var relic_data: Dictionary = DataLoader.get_relic(relic_id)
 	if relic_data.is_empty():
 		push_error("[RelicManager] Relic not found: " + relic_id)
 		return

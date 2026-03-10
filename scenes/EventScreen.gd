@@ -25,8 +25,8 @@ func _build_choices() -> void:
 		var btn := Button.new()
 		btn.text = choice.get("text", "???")
 		btn.custom_minimum_size = Vector2(400, 60)
-		btn.theme_override_font_sizes["font_size"] = 14
-		var idx := i
+		btn.add_theme_font_size_override("font_size", 14)
+		var idx: int = i
 		btn.pressed.connect(func(): _on_choice(idx))
 		choices_container.add_child(btn)
 

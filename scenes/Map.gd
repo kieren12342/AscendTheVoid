@@ -32,7 +32,7 @@ func _ready() -> void:
 			"plasma_weaver": "plasma_shard",
 			"rift_shaper": "rift_lens",
 		}
-		var starter := starter_relics.get(GameManager.champion_id, "burning_blood")
+		var starter: String = starter_relics.get(GameManager.champion_id, "burning_blood")
 		RelicManager.add_relic(starter)
 	var map := MapGenerator.generate(GameManager.run_seed)
 	_build_map_ui(map)
@@ -61,7 +61,7 @@ func _build_map_ui(map: Dictionary) -> void:
 			var ntype: String = node_data.get("type", "BATTLE")
 			btn.text = "%s\n%s" % [NODE_ICONS.get(ntype, "?"), ntype]
 			btn.custom_minimum_size = Vector2(120, 80)   # >= 120px — thumb friendly
-			btn.theme_override_font_sizes["font_size"] = 14
+			btn.add_theme_font_size_override("font_size", 14)
 
 			var available: bool = node_data.get("available", false)
 			var visited: bool = node_data.get("visited", false)
@@ -77,7 +77,7 @@ func _build_map_ui(map: Dictionary) -> void:
 				btn.disabled = true
 
 			# Capture loop vars for closure
-			var floor_idx := f
+			var floor_idx: int = f
 			var col_idx: int = node_data.get("col", 0)
 			btn.pressed.connect(func(): _on_map_node_pressed(floor_idx, col_idx))
 			hbox.add_child(btn)
@@ -103,7 +103,7 @@ func _on_map_node_pressed(floor_idx: int, col_idx: int) -> void:
 			GameManager.heal(int(GameManager.max_hp * 0.3))
 			node_info_label.text = "Rested — healed 30%% HP ❤"
 		"EVENT":
-			var events := DataLoader.events
+			var events: Array = DataLoader.events
 			if events.size() > 0:
 				var event_data: Dictionary = events.pick_random()
 				var event_scene = preload("res://scenes/EventScreen.tscn")
