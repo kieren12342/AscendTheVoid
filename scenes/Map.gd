@@ -100,13 +100,21 @@ func _on_map_node_pressed(floor_idx: int, col_idx: int) -> void:
 		"BATTLE", "ELITE", "BOSS":
 			get_tree().change_scene_to_file("res://scenes/Battle.tscn")
 		"REST":
-			# For now, heal 15 HP then return to map
-			GameManager.heal(15)
-			node_info_label.text = "Rested — healed 15 HP"
-		"SHOP":
-			node_info_label.text = "Shop coming soon!"
+			GameManager.heal(int(GameManager.max_hp * 0.3))
+			node_info_label.text = "Rested — healed 30%% HP ❤"
 		"EVENT":
-			node_info_label.text = "Event coming soon!"
+			var events := DataLoader.events
+			if events.size() > 0:
+				var event_data: Dictionary = events[GameManager.rng.randi_range(0, events.size()-1)]
+				var event_scene = preload("res://scenes/EventScreen.tscn")
+				var event_instance = event_scene.instantiate()
+				event_instance.setup(event_data, func(): pass)
+				$UI.add_child(event_instance)
+		"SHOP":
+			var shop_scene = preload("res://scenes/ShopScreen.tscn")
+			var shop_instance = shop_scene.instantiate()
+			shop_instance.setup(func(): pass)
+			$UI.add_child(shop_instance)
 
 func _on_node_selected(_node_data: Dictionary) -> void:
 	pass  # handled in _on_map_node_pressed
