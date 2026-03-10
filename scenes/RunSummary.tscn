@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://runsummary"]
+
+[ext_resource type="Script" path="res://scenes/RunSummary.gd" id="1_rs"]
+
+[node name="RunSummary" type="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rs")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = -220.0
+offset_top = -220.0
+offset_right = 220.0
+offset_bottom = 220.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+text = "Run Over"
+
+[node name="FloorLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "Floor Reached: 0"
+
+[node name="DamageLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "Total Damage Dealt: 0"
+
+[node name="CardsLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "Cards Played: 0"
+
+[node name="GoldLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "Gold Collected: 0"
+
+[node name="PlayAgainButton" type="Button" parent="Panel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(260, 60)
+theme_override_font_sizes/font_size = 18
+text = "Play Again"
