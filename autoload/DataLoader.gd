@@ -44,3 +44,9 @@ func get_enemy(id: String) -> Dictionary:
 		if e.get("id", "") == id:
 			return e
 	return {}
+
+func get_relic(id: String) -> Dictionary:
+	for r in relics:
+		if r.get("id", "") == id:
+			return r
+	return {}

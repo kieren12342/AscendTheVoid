@@ -33,6 +33,7 @@ func _ready() -> void:
 	EventBus.block_applied.connect(_refresh_block)
 	EventBus.card_played.connect(_on_card_played)
 	EventBus.champion_died.connect(_on_defeat)
+	EventBus.turn_started.connect(_on_turn_started)
 	_start_combat()
 
 func _start_combat() -> void:
@@ -81,6 +82,7 @@ func _intent_text(intent: Dictionary) -> String:
 		_:               return "?"
 
 func _on_card_played(card: CardData, _targets: Array) -> void:
+	RelicManager.on_card_played(card)
 	match card.card_type:
 		CardData.CardType.ATTACK:
 			var damage: int = card.base_damage
@@ -177,8 +179,11 @@ func _on_end_turn() -> void:
 	end_turn_btn.disabled = false
 
 func _on_victory() -> void:
+	if _combat_over:
+		return
 	_combat_over = true
 	end_turn_btn.disabled = true
+	RelicManager.on_victory()
 	overlay_label.text = "⚔ VICTORY!\n+50 Gold"
 	overlay_label.modulate = Color.GREEN
 	overlay_label.visible = true
@@ -187,10 +192,24 @@ func _on_victory() -> void:
 	restart_btn.visible = true
 	if not restart_btn.pressed.is_connected(_reload_scene):
 		restart_btn.pressed.connect(_reload_scene)
-	# Auto-transition back to map after 1.5s
-	await get_tree().create_timer(1.5).timeout
+	# Show reward screen after short delay
+	await get_tree().create_timer(1.0).timeout
 	if is_instance_valid(self):
-		get_tree().change_scene_to_file("res://scenes/Map.tscn")
+		_show_reward_screen()
+
+func _show_reward_screen() -> void:
+	var reward_scene = preload("res://scenes/RewardScreen.tscn")
+	var reward = reward_scene.instantiate()
+	# Pick 3 random relics not already held
+	var available := DataLoader.relics.filter(func(r): return not RelicManager.has_relic(r.get("id", "")))
+	available.shuffle()
+	var offered := available.slice(0, min(3, available.size()))
+	var offered_ids := offered.map(func(r): return r.get("id", ""))
+	reward.setup(offered_ids, func(): get_tree().change_scene_to_file("res://scenes/Map.tscn"))
+	add_child(reward)
+
+func _on_turn_started(_turn_num: int, _is_player: bool) -> void:
+	RelicManager.on_turn_start()
 
 func _on_defeat() -> void:
 	_combat_over = true
