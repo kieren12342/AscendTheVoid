@@ -38,7 +38,7 @@ func calc_enemy_damage(base: int, enemy_statuses: Dictionary, player_statuses: D
 		dmg = int(dmg * 1.5)
 	return max(dmg, 0)
 
-# Tick statuses at end of turn: reduce debuff stacks by 1 (min 0), apply poison damage.
+# Tick statuses at end of turn: reduce debuff stacks by 1 (min 0), apply poison/burn damage.
 # Returns updated statuses Dictionary.
 func tick_statuses(statuses: Dictionary, is_player: bool) -> Dictionary:
 	var result := statuses.duplicate()
@@ -49,8 +49,15 @@ func tick_statuses(statuses: Dictionary, is_player: bool) -> Dictionary:
 			GameManager.take_damage(poison_dmg)
 		# caller handles enemy poison damage
 		result["poison"] = max(result["poison"] - 1, 0)
+	# Burn: deal stacks damage, then reduce by 1
+	if result.get("burn", 0) > 0:
+		var burn_dmg := result["burn"]
+		if is_player:
+			GameManager.take_damage(burn_dmg)
+		# caller handles enemy burn damage
+		result["burn"] = max(result["burn"] - 1, 0)
 	# Tick timed debuffs
-	for status_id in ["weak", "vulnerable", "frail", "burn"]:
+	for status_id in ["weak", "vulnerable", "frail"]:
 		if result.get(status_id, 0) > 0:
 			result[status_id] = result[status_id] - 1
 	# Remove zeroed entries
