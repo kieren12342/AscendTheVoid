@@ -8,6 +8,7 @@ extends Node2D
 @onready var end_turn_btn: Button = $UI/Root/PlayerArea/PlayerRow/EnergyBlock/EndTurnButton
 @onready var overlay_label: Label = $UI/Root/OverlayLabel
 @onready var restart_btn: Button = $UI/Root/RestartButton
+@onready var pause_btn: Button = $UI/Root/PauseButton
 
 var card_scene = preload("res://scenes/CardUI.tscn")
 var _dragged_card = null
@@ -24,6 +25,7 @@ var _combat_over: bool = false
 
 func _ready() -> void:
 	end_turn_btn.pressed.connect(_on_end_turn)
+	pause_btn.pressed.connect(_on_pause)
 	InputManager.drag_started.connect(_on_drag_started)
 	InputManager.drag_moved.connect(_on_drag_moved)
 	InputManager.drag_ended.connect(_on_drag_ended)
@@ -32,6 +34,7 @@ func _ready() -> void:
 	EventBus.champion_hp_changed.connect(_refresh_hp)
 	EventBus.block_applied.connect(_refresh_block)
 	EventBus.card_played.connect(_on_card_played)
+	EventBus.damage_dealt.connect(_on_damage_dealt_track)
 	EventBus.champion_died.connect(_on_defeat)
 	EventBus.turn_started.connect(_on_turn_started)
 	_start_combat()
@@ -83,6 +86,8 @@ func _intent_text(intent: Dictionary) -> String:
 
 func _on_card_played(card: CardData, _targets: Array) -> void:
 	RelicManager.on_card_played(card)
+	AchievementManager.check("play_50_cards")
+	AchievementManager.run_cards_played += 1
 	match card.card_type:
 		CardData.CardType.ATTACK:
 			var damage: int = card.base_damage
@@ -184,6 +189,7 @@ func _on_victory() -> void:
 	_combat_over = true
 	end_turn_btn.disabled = true
 	RelicManager.on_victory()
+	AchievementManager.check("first_win")
 	overlay_label.text = "⚔ VICTORY!\n+50 Gold"
 	overlay_label.modulate = Color.GREEN
 	overlay_label.visible = true
@@ -211,16 +217,27 @@ func _show_reward_screen() -> void:
 func _on_turn_started(_turn_num: int, _is_player: bool) -> void:
 	RelicManager.on_turn_start()
 
+func _on_damage_dealt_track(_source: String, target: String, amount: int) -> void:
+	if target != "player":
+		AchievementManager.run_damage_dealt += amount
+
 func _on_defeat() -> void:
 	_combat_over = true
 	end_turn_btn.disabled = true
 	overlay_label.text = "💀 DEFEAT\nGame Over"
 	overlay_label.modulate = Color.RED
 	overlay_label.visible = true
-	restart_btn.text = "Try Again"
-	restart_btn.visible = true
-	if not restart_btn.pressed.is_connected(_reload_scene):
-		restart_btn.pressed.connect(_reload_scene)
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://scenes/RunSummary.tscn")
+
+func _on_pause() -> void:
+	get_tree().paused = true
+	var pause_menu = preload("res://scenes/PauseMenu.tscn").instantiate()
+	get_tree().current_scene.add_child(pause_menu)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel") and not _combat_over and not get_tree().paused:
+		_on_pause()
 
 func _reload_scene() -> void:
 	get_tree().reload_current_scene()
@@ -231,6 +248,7 @@ func _on_drag_started(pos: Vector2, _source: String) -> void:
 			_dragged_card = card
 			_drag_origin = card.global_position
 			card.z_index = 10
+			card.lift()
 			return
 
 func _on_drag_moved(pos: Vector2, _source: String) -> void:
@@ -253,6 +271,7 @@ func _on_drag_ended(pos: Vector2, _source: String) -> void:
 
 func _snap_back() -> void:
 	if _dragged_card:
+		_dragged_card.drop()
 		var tween = create_tween()
 		tween.tween_property(_dragged_card, "global_position", _drag_origin, 0.15) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)

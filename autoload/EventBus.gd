@@ -64,3 +64,6 @@ signal event_completed(event_id: String)
 signal enemy_intent_updated(enemy_index: int, intent: Dictionary)
 signal enemy_died(enemy_index: int, enemy_id: String)
 signal enemy_hp_changed(enemy_index: int, current: int, maximum: int)
+
+# --- Achievement signals ---
+signal achievement_unlocked(achievement_id: String)

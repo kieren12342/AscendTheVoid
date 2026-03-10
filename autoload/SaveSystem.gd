@@ -153,3 +153,30 @@ func _to_array(v: Variant) -> Array:
 	if v is Array:
 		return v
 	return []
+
+func save_key(key: String, value: Variant) -> void:
+	var data := {}
+	if FileAccess.file_exists(SETTINGS_PATH):
+		var file := FileAccess.open(SETTINGS_PATH, FileAccess.READ)
+		if file:
+			var parsed = JSON.parse_string(file.get_as_text())
+			file.close()
+			if parsed is Dictionary:
+				data = parsed
+	data[key] = value
+	var file2 := FileAccess.open(SETTINGS_PATH, FileAccess.WRITE)
+	if file2:
+		file2.store_string(JSON.stringify(data, "\t"))
+		file2.close()
+
+func load_key(key: String) -> Variant:
+	if not FileAccess.file_exists(SETTINGS_PATH):
+		return null
+	var file := FileAccess.open(SETTINGS_PATH, FileAccess.READ)
+	if file == null:
+		return null
+	var parsed = JSON.parse_string(file.get_as_text())
+	file.close()
+	if parsed is Dictionary:
+		return parsed.get(key, null)
+	return null

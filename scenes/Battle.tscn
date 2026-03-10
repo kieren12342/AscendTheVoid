@@ -220,3 +220,19 @@ custom_minimum_size = Vector2(200, 70)
 theme_override_font_sizes/font_size = 22
 text = "Play Again"
 visible = false
+
+[node name="PauseButton" type="Button" parent="UI/Root"]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
+offset_left = -70.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2(60, 60)
+theme_override_font_sizes/font_size = 18
+text = "⏸"
