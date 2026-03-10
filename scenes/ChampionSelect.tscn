@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=3 uid="uid://champion_select"]
+
+[ext_resource type="Script" path="res://scenes/ChampionSelect.gd" id="1_cs"]
+
+[node name="ChampionSelect" type="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cs")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+text = "Choose Your Champion"
+
+[node name="ChampionRow" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Champion1" type="VBoxContainer" parent="Layout/ChampionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectBtn" type="Button" parent="Layout/ChampionRow/Champion1"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(160, 160)
+theme_override_font_sizes/font_size = 16
+text = "Champion 1"
+
+[node name="NameLabel" type="Label" parent="Layout/ChampionRow/Champion1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+text = ""
+
+[node name="DescLabel" type="Label" parent="Layout/ChampionRow/Champion1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+autowrap_mode = 3
+text = ""
+
+[node name="Champion2" type="VBoxContainer" parent="Layout/ChampionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectBtn" type="Button" parent="Layout/ChampionRow/Champion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(160, 160)
+theme_override_font_sizes/font_size = 16
+text = "Champion 2"
+
+[node name="NameLabel" type="Label" parent="Layout/ChampionRow/Champion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+text = ""
+
+[node name="DescLabel" type="Label" parent="Layout/ChampionRow/Champion2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+autowrap_mode = 3
+text = ""
+
+[node name="Champion3" type="VBoxContainer" parent="Layout/ChampionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectBtn" type="Button" parent="Layout/ChampionRow/Champion3"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(160, 160)
+theme_override_font_sizes/font_size = 16
+text = "Champion 3"
+
+[node name="NameLabel" type="Label" parent="Layout/ChampionRow/Champion3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+text = ""
+
+[node name="DescLabel" type="Label" parent="Layout/ChampionRow/Champion3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+autowrap_mode = 3
+text = ""
+
+[node name="Champion4" type="VBoxContainer" parent="Layout/ChampionRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectBtn" type="Button" parent="Layout/ChampionRow/Champion4"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(160, 160)
+theme_override_font_sizes/font_size = 16
+text = "Champion 4"
+
+[node name="NameLabel" type="Label" parent="Layout/ChampionRow/Champion4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+text = ""
+
+[node name="DescLabel" type="Label" parent="Layout/ChampionRow/Champion4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+autowrap_mode = 3
+text = ""
+
+[node name="SeedLabel" type="Label" parent="Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "Seed: 0"

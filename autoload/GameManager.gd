@@ -70,8 +70,18 @@ func start_run(p_champion_id: String, seed: int = 0) -> void:
 	map_data = {}
 	_turn_number = 0
 	_player_block = 0
-	# Load champion defaults from data
+	# Load champion defaults from data (sets base hp/energy/relic for legacy champions)
 	_load_champion_defaults(p_champion_id)
+	# Set champion HP based on selected champion (overrides defaults for new champions)
+	var champion_hp := {
+		"void_warden": 80,
+		"shadow_lurker": 70,
+		"plasma_weaver": 68,
+		"rift_shaper": 72
+	}
+	if champion_hp.has(p_champion_id):
+		max_hp = champion_hp[p_champion_id]
+		current_hp = max_hp
 	EventBus.run_started.emit(run_seed, champion_id)
 	print("[GameManager] Run started. Champion: %s | Deck size: %d" % [champion_id, deck.size()])
 
@@ -149,14 +159,29 @@ func _load_starter_deck(p_champion_id: String) -> void:
 		push_error("[GameManager] cards.json parse error")
 		return
 	var all_cards: Array = parsed
-	# Starter deck: all BASIC cards for this champion (+ generic basics)
+	# Starter deck: BASIC cards matching this champion_id or colorless (empty/"colorless")
 	for entry in all_cards:
 		if entry is Dictionary:
 			var cid: String = entry.get("champion_id", "")
 			var rarity: String = entry.get("rarity", "")
-			if (cid == p_champion_id or cid == "") and rarity == "BASIC":
+			if (cid == p_champion_id or cid == "" or cid == "colorless") and rarity == "BASIC":
 				var card_data := _dict_to_card(entry)
 				deck.append(card_data)
+	# Fallback: if no champion-specific cards found, add 5 basic Strike cards
+	if deck.is_empty():
+		for _i in range(5):
+			var fallback := CardData.new()
+			fallback.id = "strike"
+			fallback.card_name = "Strike"
+			fallback.description = "Deal !D! damage."
+			fallback.upgraded_description = "Deal !D! damage."
+			fallback.card_type = CardData.CardType.ATTACK
+			fallback.rarity = CardData.CardRarity.BASIC
+			fallback.target = CardData.TargetType.SINGLE_ENEMY
+			fallback.energy_cost = 1
+			fallback.base_damage = 6
+			fallback.champion_id = p_champion_id
+			deck.append(fallback)
 
 func _dict_to_card(d: Dictionary) -> CardData:
 	var c := CardData.new()

@@ -9,7 +9,7 @@ config_version=5
 
 config/name="AscendTheVoid"
 config/features=PackedStringArray("4.3", "Forward Plus")
-run/main_scene="res://scenes/Map.tscn"
+run/main_scene="res://scenes/ChampionSelect.tscn"
 
 [autoload]
 
