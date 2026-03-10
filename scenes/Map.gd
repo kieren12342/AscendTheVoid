@@ -23,13 +23,7 @@ const NODE_ICONS := {
 
 func _ready() -> void:
 	EventBus.map_node_selected.connect(_on_node_selected)
-	if not GameManager.run_active:
-		GameManager.start_run("rift_walker", randi())
-	var map: Dictionary
-	if MapGenerator.map_data.is_empty():
-		map = MapGenerator.generate(GameManager.run_seed)
-	else:
-		map = MapGenerator.map_data
+	var map := MapGenerator.generate(GameManager.run_seed)
 	_build_map_ui(map)
 
 func _build_map_ui(map: Dictionary) -> void:
