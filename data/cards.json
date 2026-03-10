@@ -19,7 +19,9 @@
     "upgraded_damage": 9,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "rift_guard",
@@ -41,7 +43,9 @@
     "upgraded_damage": -1,
     "upgraded_block": 8,
     "upgraded_magic_number": -1,
-    "tags": ["block"]
+    "tags": [
+      "block"
+    ]
   },
   {
     "id": "phase_slash",
@@ -63,7 +67,10 @@
     "upgraded_damage": 11,
     "upgraded_block": -1,
     "upgraded_magic_number": 2,
-    "tags": ["attack", "vulnerable"]
+    "tags": [
+      "attack",
+      "vulnerable"
+    ]
   },
   {
     "id": "dimensional_shift",
@@ -85,7 +92,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 6,
     "upgraded_magic_number": 2,
-    "tags": ["block", "draw"]
+    "tags": [
+      "block",
+      "draw"
+    ]
   },
   {
     "id": "void_resonance",
@@ -107,7 +117,10 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
-    "tags": ["power", "strength"]
+    "tags": [
+      "power",
+      "strength"
+    ]
   },
   {
     "id": "eldritch_whisper",
@@ -129,7 +142,10 @@
     "upgraded_damage": 8,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "aoe"]
+    "tags": [
+      "attack",
+      "aoe"
+    ]
   },
   {
     "id": "herald_ward",
@@ -151,7 +167,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 8,
     "upgraded_magic_number": 2,
-    "tags": ["block", "artifact"]
+    "tags": [
+      "block",
+      "artifact"
+    ]
   },
   {
     "id": "mind_fracture",
@@ -173,7 +192,10 @@
     "upgraded_damage": 10,
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
-    "tags": ["attack", "weak"]
+    "tags": [
+      "attack",
+      "weak"
+    ]
   },
   {
     "id": "herald_sermon",
@@ -195,7 +217,10 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 2,
-    "tags": ["debuff", "vulnerable"]
+    "tags": [
+      "debuff",
+      "vulnerable"
+    ]
   },
   {
     "id": "cosmic_decree",
@@ -217,7 +242,10 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 5,
-    "tags": ["power", "aoe"]
+    "tags": [
+      "power",
+      "aoe"
+    ]
   },
   {
     "id": "chaos_weave",
@@ -239,7 +267,9 @@
     "upgraded_damage": 10,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "entropy_veil",
@@ -261,7 +291,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 10,
     "upgraded_magic_number": -1,
-    "tags": ["block", "exhaust"]
+    "tags": [
+      "block",
+      "exhaust"
+    ]
   },
   {
     "id": "thread_of_fate",
@@ -283,7 +316,10 @@
     "upgraded_damage": 7,
     "upgraded_block": -1,
     "upgraded_magic_number": 5,
-    "tags": ["attack", "poison"]
+    "tags": [
+      "attack",
+      "poison"
+    ]
   },
   {
     "id": "loom_manipulation",
@@ -305,7 +341,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 5,
     "upgraded_magic_number": 3,
-    "tags": ["block", "draw"]
+    "tags": [
+      "block",
+      "draw"
+    ]
   },
   {
     "id": "chaos_engine",
@@ -327,7 +366,9 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 4,
-    "tags": ["power"]
+    "tags": [
+      "power"
+    ]
   },
   {
     "id": "null_blade",
@@ -349,7 +390,10 @@
     "upgraded_damage": 14,
     "upgraded_block": 7,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "block"]
+    "tags": [
+      "attack",
+      "block"
+    ]
   },
   {
     "id": "null_bastion",
@@ -371,7 +415,9 @@
     "upgraded_damage": -1,
     "upgraded_block": 11,
     "upgraded_magic_number": -1,
-    "tags": ["block"]
+    "tags": [
+      "block"
+    ]
   },
   {
     "id": "annihilate",
@@ -393,7 +439,10 @@
     "upgraded_damage": 18,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "aoe"]
+    "tags": [
+      "attack",
+      "aoe"
+    ]
   },
   {
     "id": "void_fortress",
@@ -415,7 +464,10 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 4,
-    "tags": ["buff", "metallicize"]
+    "tags": [
+      "buff",
+      "metallicize"
+    ]
   },
   {
     "id": "sovereign_dominion",
@@ -437,7 +489,11 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
-    "tags": ["power", "strength", "dexterity"]
+    "tags": [
+      "power",
+      "strength",
+      "dexterity"
+    ]
   },
   {
     "id": "stellar_strike",
@@ -459,7 +515,10 @@
     "upgraded_damage": 8,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "colorless"]
+    "tags": [
+      "attack",
+      "colorless"
+    ]
   },
   {
     "id": "cosmic_shield",
@@ -481,7 +540,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 6,
     "upgraded_magic_number": -1,
-    "tags": ["block", "colorless"]
+    "tags": [
+      "block",
+      "colorless"
+    ]
   },
   {
     "id": "void_insight",
@@ -503,7 +565,11 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
-    "tags": ["draw", "colorless", "exhaust"]
+    "tags": [
+      "draw",
+      "colorless",
+      "exhaust"
+    ]
   },
   {
     "id": "adrenaline_surge",
@@ -525,7 +591,12 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 3,
-    "tags": ["energy", "draw", "colorless", "exhaust"]
+    "tags": [
+      "energy",
+      "draw",
+      "colorless",
+      "exhaust"
+    ]
   },
   {
     "id": "fading_shield",
@@ -547,7 +618,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 10,
     "upgraded_magic_number": -1,
-    "tags": ["block", "ethereal"]
+    "tags": [
+      "block",
+      "ethereal"
+    ]
   },
   {
     "id": "void_warden_strike",
@@ -569,7 +643,9 @@
     "upgraded_damage": 11,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "void_warden_smash",
@@ -591,7 +667,9 @@
     "upgraded_damage": 18,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "void_warden_shield",
@@ -613,7 +691,9 @@
     "upgraded_damage": -1,
     "upgraded_block": 12,
     "upgraded_magic_number": -1,
-    "tags": ["block"]
+    "tags": [
+      "block"
+    ]
   },
   {
     "id": "void_warden_taunt",
@@ -635,7 +715,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 6,
     "upgraded_magic_number": 2,
-    "tags": ["block", "debuff"]
+    "tags": [
+      "block",
+      "debuff"
+    ]
   },
   {
     "id": "void_warden_power",
@@ -657,7 +740,9 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 5,
-    "tags": ["power"]
+    "tags": [
+      "power"
+    ]
   },
   {
     "id": "shadow_lurker_stab",
@@ -679,7 +764,9 @@
     "upgraded_damage": 10,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "shadow_lurker_backstab",
@@ -701,7 +788,10 @@
     "upgraded_damage": 7,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "multi_hit"]
+    "tags": [
+      "attack",
+      "multi_hit"
+    ]
   },
   {
     "id": "shadow_lurker_dodge",
@@ -723,7 +813,9 @@
     "upgraded_damage": -1,
     "upgraded_block": 9,
     "upgraded_magic_number": -1,
-    "tags": ["block"]
+    "tags": [
+      "block"
+    ]
   },
   {
     "id": "shadow_lurker_poison",
@@ -745,7 +837,10 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 5,
-    "tags": ["debuff", "poison"]
+    "tags": [
+      "debuff",
+      "poison"
+    ]
   },
   {
     "id": "shadow_lurker_power",
@@ -767,7 +862,9 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 5,
-    "tags": ["power"]
+    "tags": [
+      "power"
+    ]
   },
   {
     "id": "plasma_weaver_bolt",
@@ -789,7 +886,9 @@
     "upgraded_damage": 12,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "plasma_weaver_burst",
@@ -811,7 +910,10 @@
     "upgraded_damage": 17,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "aoe"]
+    "tags": [
+      "attack",
+      "aoe"
+    ]
   },
   {
     "id": "plasma_weaver_barrier",
@@ -833,7 +935,9 @@
     "upgraded_damage": -1,
     "upgraded_block": 10,
     "upgraded_magic_number": -1,
-    "tags": ["block"]
+    "tags": [
+      "block"
+    ]
   },
   {
     "id": "plasma_weaver_charge",
@@ -855,7 +959,9 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 2,
-    "tags": ["energy"]
+    "tags": [
+      "energy"
+    ]
   },
   {
     "id": "plasma_weaver_power",
@@ -877,7 +983,9 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 2,
-    "tags": ["power"]
+    "tags": [
+      "power"
+    ]
   },
   {
     "id": "rift_shaper_slash",
@@ -899,7 +1007,9 @@
     "upgraded_damage": 11,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack"]
+    "tags": [
+      "attack"
+    ]
   },
   {
     "id": "rift_shaper_tear",
@@ -921,7 +1031,10 @@
     "upgraded_damage": 9,
     "upgraded_block": -1,
     "upgraded_magic_number": -1,
-    "tags": ["attack", "draw"]
+    "tags": [
+      "attack",
+      "draw"
+    ]
   },
   {
     "id": "rift_shaper_bend",
@@ -943,7 +1056,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 8,
     "upgraded_magic_number": -1,
-    "tags": ["block", "draw"]
+    "tags": [
+      "block",
+      "draw"
+    ]
   },
   {
     "id": "rift_shaper_warp",
@@ -965,7 +1081,10 @@
     "upgraded_damage": -1,
     "upgraded_block": 13,
     "upgraded_magic_number": -1,
-    "tags": ["block", "ethereal"]
+    "tags": [
+      "block",
+      "ethereal"
+    ]
   },
   {
     "id": "rift_shaper_power",
@@ -987,6 +1106,966 @@
     "upgraded_damage": -1,
     "upgraded_block": -1,
     "upgraded_magic_number": 2,
-    "tags": ["power", "draw"]
+    "tags": [
+      "power",
+      "draw"
+    ]
+  },
+  {
+    "id": "vw_body_slam",
+    "card_name": "Body Slam",
+    "description": "Deal damage equal to your current Block.",
+    "upgraded_description": "Deal damage equal to your current Block.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "vw_impervious",
+    "card_name": "Impervious",
+    "description": "Gain !B! Block. Exhaust.",
+    "upgraded_description": "Gain !B! Block. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "RARE",
+    "target": "SELF",
+    "energy_cost": 2,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 30,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 40,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "vw_entrench",
+    "card_name": "Entrench",
+    "description": "Double your current Block.",
+    "upgraded_description": "Double your current Block.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 2,
+    "upgraded_energy_cost": 1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "vw_sentinel",
+    "card_name": "Sentinel",
+    "description": "Gain !B! Block. If this card is Exhausted, gain 2 Energy.",
+    "upgraded_description": "Gain !B! Block. If this card is Exhausted, gain 2 Energy.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 5,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 8,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "vw_seeing_red",
+    "card_name": "Seeing Red",
+    "description": "Gain 2 Energy. Exhaust.",
+    "upgraded_description": "Gain 3 Energy. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 2,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 3,
+    "tags": []
+  },
+  {
+    "id": "vw_pommel_strike",
+    "card_name": "Pommel Strike",
+    "description": "Deal !D! damage. Draw 1 card.",
+    "upgraded_description": "Deal !D! damage. Draw 1 card.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 9,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 14,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "vw_cleave",
+    "card_name": "Cleave",
+    "description": "Deal !D! damage to ALL enemies.",
+    "upgraded_description": "Deal !D! damage to ALL enemies.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMIES",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 8,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 11,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack",
+      "aoe"
+    ]
+  },
+  {
+    "id": "vw_armaments",
+    "card_name": "Armaments",
+    "description": "Gain !B! Block. Upgrade a card in your hand.",
+    "upgraded_description": "Gain !B! Block. Upgrade ALL cards in your hand.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 5,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 5,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "vw_flame_barrier",
+    "card_name": "Flame Barrier",
+    "description": "Gain !B! Block. Whenever you are attacked this turn, deal 4 damage back.",
+    "upgraded_description": "Gain !B! Block. Whenever you are attacked this turn, deal 6 damage back.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 2,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 12,
+    "base_magic_number": 4,
+    "upgraded_damage": -1,
+    "upgraded_block": 16,
+    "upgraded_magic_number": 6,
+    "tags": [
+      "block",
+      "thorns"
+    ]
+  },
+  {
+    "id": "vw_barricade",
+    "card_name": "Barricade",
+    "description": "Block is no longer removed at the start of your turn.",
+    "upgraded_description": "Block is no longer removed at the start of your turn.",
+    "card_type": "POWER",
+    "rarity": "RARE",
+    "target": "SELF",
+    "energy_cost": 3,
+    "upgraded_energy_cost": 2,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "void_warden",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "id": "sl_noxious_fumes",
+    "card_name": "Noxious Fumes",
+    "description": "At the start of each turn, apply 2 Poison to ALL enemies.",
+    "upgraded_description": "At the start of each turn, apply 3 Poison to ALL enemies.",
+    "card_type": "POWER",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 2,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 3,
+    "tags": [
+      "power",
+      "poison"
+    ]
+  },
+  {
+    "id": "sl_deadly_poison",
+    "card_name": "Deadly Poison",
+    "description": "Apply !M! Poison to an enemy.",
+    "upgraded_description": "Apply !M! Poison to an enemy.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 5,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 8,
+    "tags": [
+      "debuff",
+      "poison"
+    ]
+  },
+  {
+    "id": "sl_neutralize",
+    "card_name": "Neutralize",
+    "description": "Deal !D! damage. Apply 1 Weak.",
+    "upgraded_description": "Deal !D! damage. Apply 2 Weak.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 3,
+    "base_block": 0,
+    "base_magic_number": 1,
+    "upgraded_damage": 4,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 2,
+    "tags": [
+      "attack",
+      "debuff"
+    ]
+  },
+  {
+    "id": "sl_predator",
+    "card_name": "Predator",
+    "description": "Deal !D! damage. Draw 2 cards.",
+    "upgraded_description": "Deal !D! damage. Draw 3 cards.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 2,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 15,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 21,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "sl_quick_slash",
+    "card_name": "Quick Slash",
+    "description": "Deal !D! damage. Draw 1 card.",
+    "upgraded_description": "Deal !D! damage. Draw 1 card.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 8,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 12,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "sl_blur",
+    "card_name": "Blur",
+    "description": "Gain !B! Block. Block is not removed at end of turn this turn.",
+    "upgraded_description": "Gain !B! Block. Block is not removed at end of turn this turn.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 8,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 11,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "sl_finisher",
+    "card_name": "Finisher",
+    "description": "Deal !D! damage for each Attack played this turn.",
+    "upgraded_description": "Deal !D! damage for each Attack played this turn.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 6,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 8,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "sl_corpse_explosion",
+    "card_name": "Corpse Explosion",
+    "description": "Apply !M! Poison. If enemy dies from Poison, deal damage equal to max HP to all enemies.",
+    "upgraded_description": "Apply !M! Poison. If enemy dies from Poison, deal damage equal to max HP to all enemies.",
+    "card_type": "SKILL",
+    "rarity": "RARE",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 2,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 6,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 9,
+    "tags": [
+      "debuff",
+      "poison"
+    ]
+  },
+  {
+    "id": "sl_caltrops",
+    "card_name": "Caltrops",
+    "description": "Whenever you are attacked, apply 3 Poison to attacker.",
+    "upgraded_description": "Whenever you are attacked, apply 5 Poison to attacker.",
+    "card_type": "POWER",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 3,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 5,
+    "tags": [
+      "power",
+      "poison"
+    ]
+  },
+  {
+    "id": "sl_infinite_blades",
+    "card_name": "Infinite Blades",
+    "description": "At the start of each turn, add a Shiv to your hand.",
+    "upgraded_description": "At the start of each turn, add 2 Shivs to your hand.",
+    "card_type": "POWER",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "shadow_lurker",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "id": "pw_ball_lightning",
+    "card_name": "Ball Lightning",
+    "description": "Deal !D! damage to ALL enemies.",
+    "upgraded_description": "Deal !D! damage to ALL enemies.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMIES",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 7,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 10,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack",
+      "aoe"
+    ]
+  },
+  {
+    "id": "pw_chill",
+    "card_name": "Chill",
+    "description": "Apply 1 Vulnerable to all enemies. Exhaust.",
+    "upgraded_description": "Apply 2 Vulnerable to all enemies. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "ALL_ENEMIES",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 1,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 2,
+    "tags": [
+      "debuff"
+    ]
+  },
+  {
+    "id": "pw_compile_driver",
+    "card_name": "Compile Driver",
+    "description": "Deal !D! damage. Draw 1 card.",
+    "upgraded_description": "Deal !D! damage. Draw 2 cards.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 7,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 10,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "pw_coolheaded",
+    "card_name": "Coolheaded",
+    "description": "Draw 3 cards. Exhaust.",
+    "upgraded_description": "Draw 4 cards. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 3,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 4,
+    "tags": []
+  },
+  {
+    "id": "pw_ftl",
+    "card_name": "FTL",
+    "description": "Deal !D! damage. If you have played 3+ cards this turn, draw 1 card.",
+    "upgraded_description": "Deal !D! damage. If you have played 2+ cards this turn, draw 1 card.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 5,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 7,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "pw_glacier",
+    "card_name": "Glacier",
+    "description": "Gain !B! Block. Add a Shiv to your hand.",
+    "upgraded_description": "Gain !B! Block. Add 2 Shivs to your hand.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 2,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 7,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 10,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "pw_reboot",
+    "card_name": "Reboot",
+    "description": "Shuffle all cards from your hand into your draw pile. Draw 4 cards. Exhaust.",
+    "upgraded_description": "Shuffle all cards from your hand into your draw pile. Draw 5 cards. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "RARE",
+    "target": "SELF",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 4,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 5,
+    "tags": []
+  },
+  {
+    "id": "pw_storm",
+    "card_name": "Storm",
+    "description": "Whenever you play a Power card, deal 1 damage to ALL enemies.",
+    "upgraded_description": "Whenever you play a Power card, deal 2 damage to ALL enemies.",
+    "card_type": "POWER",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 1,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 2,
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "id": "pw_thunder_strike",
+    "card_name": "Thunder Strike",
+    "description": "Deal !D! damage for each Lightning played this combat.",
+    "upgraded_description": "Deal !D! damage for each Lightning played this combat.",
+    "card_type": "ATTACK",
+    "rarity": "RARE",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 3,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 7,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 10,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "pw_defragment",
+    "card_name": "Defragment",
+    "description": "Gain 1 Strength.",
+    "upgraded_description": "Gain 2 Strength.",
+    "card_type": "POWER",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "plasma_weaver",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 1,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 2,
+    "tags": [
+      "power"
+    ]
+  },
+  {
+    "id": "rs_acrobatics",
+    "card_name": "Acrobatics",
+    "description": "Draw 3 cards. Discard 1 card.",
+    "upgraded_description": "Draw 4 cards. Discard 1 card.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 3,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 4,
+    "tags": []
+  },
+  {
+    "id": "rs_backflip",
+    "card_name": "Backflip",
+    "description": "Gain !B! Block. Draw 2 cards.",
+    "upgraded_description": "Gain !B! Block. Draw 3 cards.",
+    "card_type": "SKILL",
+    "rarity": "COMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 0,
+    "base_block": 5,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": 8,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "block"
+    ]
+  },
+  {
+    "id": "rs_bludgeon",
+    "card_name": "Bludgeon",
+    "description": "Deal !D! damage.",
+    "upgraded_description": "Deal !D! damage.",
+    "card_type": "ATTACK",
+    "rarity": "RARE",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 3,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 32,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 42,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "rs_calculated_gamble",
+    "card_name": "Calculated Gamble",
+    "description": "Discard your hand. Draw that many cards. Exhaust.",
+    "upgraded_description": "Discard your hand. Draw that many cards.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": []
+  },
+  {
+    "id": "rs_dagger_spray",
+    "card_name": "Dagger Spray",
+    "description": "Deal !D! damage twice.",
+    "upgraded_description": "Deal !D! damage twice.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 4,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 6,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack",
+      "multi_hit"
+    ]
+  },
+  {
+    "id": "rs_flying_knee",
+    "card_name": "Flying Knee",
+    "description": "Deal !D! damage. Next turn, gain 1 Energy.",
+    "upgraded_description": "Deal !D! damage. Next turn, gain 2 Energy.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 8,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 11,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "rs_heel_hook",
+    "card_name": "Heel Hook",
+    "description": "Deal !D! damage. If the enemy is Weak, gain 1 Energy and draw 1 card.",
+    "upgraded_description": "Deal !D! damage. If the enemy is Weak, gain 1 Energy and draw 2 cards.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 5,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 8,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "rs_outmaneuver",
+    "card_name": "Outmaneuver",
+    "description": "Gain 2 Energy. Exhaust.",
+    "upgraded_description": "Gain 3 Energy. Exhaust.",
+    "card_type": "SKILL",
+    "rarity": "UNCOMMON",
+    "target": "SELF",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": true,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 0,
+    "base_block": 0,
+    "base_magic_number": 2,
+    "upgraded_damage": -1,
+    "upgraded_block": -1,
+    "upgraded_magic_number": 3,
+    "tags": []
+  },
+  {
+    "id": "rs_unload",
+    "card_name": "Unload",
+    "description": "Deal !D! damage. Discard all non-Attack cards in your hand.",
+    "upgraded_description": "Deal !D! damage. Discard all non-Attack cards in your hand.",
+    "card_type": "ATTACK",
+    "rarity": "UNCOMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 1,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 14,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 20,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
+  },
+  {
+    "id": "rs_slice",
+    "card_name": "Slice",
+    "description": "Deal !D! damage.",
+    "upgraded_description": "Deal !D! damage.",
+    "card_type": "ATTACK",
+    "rarity": "COMMON",
+    "target": "SINGLE_ENEMY",
+    "energy_cost": 0,
+    "upgraded_energy_cost": -1,
+    "exhausts": false,
+    "ethereal": false,
+    "innate": false,
+    "champion_id": "rift_shaper",
+    "base_damage": 6,
+    "base_block": 0,
+    "base_magic_number": 0,
+    "upgraded_damage": 9,
+    "upgraded_block": -1,
+    "upgraded_magic_number": -1,
+    "tags": [
+      "attack"
+    ]
   }
 ]

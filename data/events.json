@@ -1,215 +1,142 @@
 [
   {
-    "id": "the_rift_merchant",
-    "event_name": "The Rift Merchant",
-    "description": "A shimmering figure offers you a deal across the void...",
-    "act": 0,
+    "id": "ancient_altar",
+    "name": "Ancient Altar",
+    "description": "A glowing altar pulses with void energy. Do you offer your blood?",
     "choices": [
-      {
-        "text": "Pay 75 gold for a rare card.",
-        "condition": "gold >= 75",
-        "effects": [
-          { "type": "lose_gold", "amount": 75 },
-          { "type": "gain_card", "rarity": "RARE" }
-        ]
-      },
-      {
-        "text": "Pay 50 gold for a common relic.",
-        "condition": "gold >= 50",
-        "effects": [
-          { "type": "lose_gold", "amount": 50 },
-          { "type": "gain_relic", "rarity": "COMMON" }
-        ]
-      },
-      {
-        "text": "Leave.",
-        "effects": []
-      }
+      {"text": "Offer Blood (-6 HP, +Relic)", "effects": [{"type":"lose_hp","amount":6},{"type":"gain_relic","id":"void_crystal"}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "the_void_altar",
-    "event_name": "The Void Altar",
-    "description": "An ancient altar pulses with eldritch light. What do you offer?",
-    "act": 0,
+    "id": "lost_adventurer",
+    "name": "Lost Adventurer",
+    "description": "A wounded explorer offers you their gear in exchange for healing.",
     "choices": [
-      {
-        "text": "Sacrifice 10 HP to gain 2 Strength for this combat.",
-        "effects": [
-          { "type": "lose_hp", "amount": 10 },
-          { "type": "gain_buff", "status": "strength", "stacks": 2 }
-        ]
-      },
-      {
-        "text": "Offer a card from your hand (remove it permanently).",
-        "effects": [
-          { "type": "remove_card_from_deck" }
-        ]
-      },
-      {
-        "text": "Ignore the altar.",
-        "effects": []
-      }
+      {"text": "Help (+Card, -8 HP)", "effects": [{"type":"lose_hp","amount":8},{"type":"gain_card","id":"random_uncommon"}]},
+      {"text": "Ignore", "effects": []}
     ]
   },
   {
-    "id": "dimensional_rift",
-    "event_name": "Dimensional Rift",
-    "description": "A rift in space tears open before you. Portals flicker with possibility.",
-    "act": 0,
+    "id": "void_pool",
+    "name": "Void Pool",
+    "description": "A shimmering pool of void energy. Drink?",
     "choices": [
-      {
-        "text": "Reach through and grab something (gain a random relic, lose 15 HP).",
-        "effects": [
-          { "type": "lose_hp", "amount": 15 },
-          { "type": "gain_relic", "rarity": "RANDOM" }
-        ]
-      },
-      {
-        "text": "Step through to find a shortcut (skip 1 floor).",
-        "effects": [
-          { "type": "skip_floor" }
-        ]
-      },
-      {
-        "text": "Close the rift (gain 30 gold).",
-        "effects": [
-          { "type": "gain_gold", "amount": 30 }
-        ]
-      }
+      {"text": "Drink (Heal 20 HP)", "effects": [{"type":"heal","amount":20}]},
+      {"text": "Drink Deeply (Heal 35 HP, -1 Max HP)", "effects": [{"type":"heal","amount":35},{"type":"max_hp_down","amount":1}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "wandering_scholar",
-    "event_name": "Wandering Scholar",
-    "description": "A mad scholar mutters formulae of the void. He offers his knowledge—for a price.",
-    "act": 0,
+    "id": "merchant_caravan",
+    "name": "Merchant Caravan",
+    "description": "A travelling merchant offers a deal.",
     "choices": [
-      {
-        "text": "Study with him (upgrade a card in your deck).",
-        "condition": "gold >= 50",
-        "effects": [
-          { "type": "lose_gold", "amount": 50 },
-          { "type": "upgrade_card" }
-        ]
-      },
-      {
-        "text": "Ask about relics (gain a common relic for free).",
-        "effects": [
-          { "type": "gain_relic", "rarity": "COMMON" }
-        ]
-      },
-      {
-        "text": "Ignore him.",
-        "effects": []
-      }
+      {"text": "Buy HP Potion (30 Gold)", "effects": [{"type":"spend_gold","amount":30},{"type":"gain_potion","id":"hp_potion"}]},
+      {"text": "Buy Card Removal (75 Gold)", "effects": [{"type":"spend_gold","amount":75},{"type":"remove_card","id":"random"}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "cosmic_well",
-    "event_name": "Cosmic Well",
-    "description": "A well of glowing void energy stretches into eternity. Its power calls to you.",
-    "act": 0,
+    "id": "training_grounds",
+    "name": "Training Grounds",
+    "description": "Ancient training equipment. Use it?",
     "choices": [
-      {
-        "text": "Drink deeply (gain 20 max HP, lose 5 current HP).",
-        "effects": [
-          { "type": "gain_max_hp", "amount": 20 },
-          { "type": "lose_hp", "amount": 5 }
-        ]
-      },
-      {
-        "text": "Sip carefully (heal 15 HP).",
-        "effects": [
-          { "type": "heal_hp", "amount": 15 }
-        ]
-      },
-      {
-        "text": "Fill a vial (gain 1 potion).",
-        "effects": [
-          { "type": "gain_potion", "potion_id": "void_potion" }
-        ]
-      }
+      {"text": "Train (+1 Max HP)", "effects": [{"type":"max_hp_up","amount":1}]},
+      {"text": "Train Hard (+3 Max HP, -10 HP)", "effects": [{"type":"max_hp_up","amount":3},{"type":"lose_hp","amount":10}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "the_trapped_void",
-    "event_name": "The Trapped Void",
-    "description": "A creature made of pure void writhes in chains. It pleads for release.",
-    "act": 0,
+    "id": "cursed_tome",
+    "name": "Cursed Tome",
+    "description": "A tome radiating dark energy. Read it?",
     "choices": [
-      {
-        "text": "Free it (gain a rare relic, it may return as an enemy later).",
-        "effects": [
-          { "type": "gain_relic", "rarity": "RARE" },
-          { "type": "flag", "id": "freed_void_creature" }
-        ]
-      },
-      {
-        "text": "Destroy it (gain 50 gold, gain 10 max HP).",
-        "effects": [
-          { "type": "gain_gold", "amount": 50 },
-          { "type": "gain_max_hp", "amount": 10 }
-        ]
-      },
-      {
-        "text": "Leave it.",
-        "effects": []
-      }
+      {"text": "Read (+2 Cards of your type)", "effects": [{"type":"gain_card","id":"random_attack"},{"type":"gain_card","id":"random_skill"}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "shattered_mirror",
-    "event_name": "Shattered Mirror",
-    "description": "A mirror shows infinite reflections of yourself, each with a different path taken.",
-    "act": 0,
+    "id": "void_shrine",
+    "name": "Void Shrine",
+    "description": "A shrine to the void. Pray?",
     "choices": [
-      {
-        "text": "Touch the mirror (copy a card in your hand, add it to your deck).",
-        "effects": [
-          { "type": "copy_hand_card" }
-        ]
-      },
-      {
-        "text": "Smash it (remove a card from your deck).",
-        "effects": [
-          { "type": "remove_card_from_deck" }
-        ]
-      },
-      {
-        "text": "Ignore it.",
-        "effects": []
-      }
+      {"text": "Pray (Heal 12 HP)", "effects": [{"type":"heal","amount":12}]},
+      {"text": "Sacrifice (-5 Max HP, +Rare Relic)", "effects": [{"type":"max_hp_down","amount":5},{"type":"gain_relic","id":"void_heart"}]},
+      {"text": "Leave", "effects": []}
     ]
   },
   {
-    "id": "void_blessing",
-    "event_name": "Void Blessing",
-    "description": "A disembodied voice speaks in frequencies that reshape reality. It offers a gift.",
-    "act": 0,
+    "id": "wandering_smith",
+    "name": "Wandering Smith",
+    "description": "A smith offers to upgrade one of your cards for free.",
     "choices": [
-      {
-        "text": "Accept the blessing (upgrade a random card in your deck).",
-        "effects": [
-          { "type": "upgrade_random_card" }
-        ]
-      },
-      {
-        "text": "Ask for gold (gain 40 gold).",
-        "effects": [
-          { "type": "gain_gold", "amount": 40 }
-        ]
-      },
-      {
-        "text": "Demand healing (heal 25 HP).",
-        "effects": [
-          { "type": "heal_hp", "amount": 25 }
-        ]
-      },
-      {
-        "text": "Reject the blessing.",
-        "effects": []
-      }
+      {"text": "Upgrade a card (random)", "effects": [{"type":"upgrade_card","id":"random"}]},
+      {"text": "Leave", "effects": []}
+    ]
+  },
+  {
+    "id": "golden_idol",
+    "name": "Golden Idol",
+    "description": "A golden idol sits on a pedestal.",
+    "choices": [
+      {"text": "Take It (+100 Gold, Curse)", "effects": [{"type":"gain_gold","amount":100},{"type":"gain_card","id":"curse_wound"}]},
+      {"text": "Leave", "effects": []}
+    ]
+  },
+  {
+    "id": "void_rift",
+    "name": "Void Rift",
+    "description": "A rift in reality pulses before you.",
+    "choices": [
+      {"text": "Enter (+50 Gold, -15 HP)", "effects": [{"type":"gain_gold","amount":50},{"type":"lose_hp","amount":15}]},
+      {"text": "Close It (+1 Max HP)", "effects": [{"type":"max_hp_up","amount":1}]},
+      {"text": "Ignore", "effects": []}
+    ]
+  },
+  {
+    "id": "mysterious_egg",
+    "name": "Mysterious Egg",
+    "description": "A strange pulsing egg. Take it?",
+    "choices": [
+      {"text": "Take Egg (+Relic: Iron Will)", "effects": [{"type":"gain_relic","id":"iron_will"}]},
+      {"text": "Leave", "effects": []}
+    ]
+  },
+  {
+    "id": "rest_site",
+    "name": "Hidden Rest Site",
+    "description": "A hidden campfire offers rest or study.",
+    "choices": [
+      {"text": "Rest (Heal 30% Max HP)", "effects": [{"type":"heal_percent","amount":30}]},
+      {"text": "Study (Upgrade random card)", "effects": [{"type":"upgrade_card","id":"random"}]}
+    ]
+  },
+  {
+    "id": "poison_mushroom",
+    "name": "Poison Mushroom",
+    "description": "A glowing mushroom. Eat it?",
+    "choices": [
+      {"text": "Eat (-5 HP, +Poison Card)", "effects": [{"type":"lose_hp","amount":5},{"type":"gain_card","id":"random_skill"}]},
+      {"text": "Leave", "effects": []}
+    ]
+  },
+  {
+    "id": "spirit_warrior",
+    "name": "Spirit Warrior",
+    "description": "A warrior spirit challenges you to a test of strength.",
+    "choices": [
+      {"text": "Accept (+2 Strength for run)", "effects": [{"type":"gain_strength","amount":2}]},
+      {"text": "Decline", "effects": []}
+    ]
+  },
+  {
+    "id": "treasure_chest",
+    "name": "Treasure Chest",
+    "description": "A locked chest. Open it?",
+    "choices": [
+      {"text": "Open (+75 Gold)", "effects": [{"type":"gain_gold","amount":75}]},
+      {"text": "Leave", "effects": []}
     ]
   }
 ]
