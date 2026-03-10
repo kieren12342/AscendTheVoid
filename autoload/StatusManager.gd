@@ -28,8 +28,11 @@ func get_enemy_status(slot: int, status_id: String) -> int:
 func tick_player_end_of_turn() -> void:
 	player_statuses = ModifierSystem.tick_statuses(player_statuses, true)
 
-# Call at end of enemy turn for each active enemy slot
+# Call at end of enemy turn for each active enemy slot.
+# Returns the enemy's HP after poison and burn damage are applied.
 func tick_enemy_end_of_turn(slot: int, enemy_current_hp: int) -> int:
-	var poison_dmg := enemy_statuses[slot].get("poison", 0)
+	var poison_dmg: int = enemy_statuses[slot].get("poison", 0)
+	var burn_dmg: int = enemy_statuses[slot].get("burn", 0)
+	var total_dot: int = poison_dmg + burn_dmg
 	enemy_statuses[slot] = ModifierSystem.tick_statuses(enemy_statuses[slot], false)
-	return max(enemy_current_hp - poison_dmg, 0)
+	return max(enemy_current_hp - total_dot, 0)
