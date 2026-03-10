@@ -1,122 +1,122 @@
 [
   {
-    "id": "void_shard",
-    "relic_name": "Void Shard",
-    "description": "At the start of each combat, gain 1 extra Energy this turn.",
-    "flavor_text": "It hums with the silence between stars.",
+    "id": "burning_blood",
+    "name": "Burning Blood",
+    "description": "At the end of combat, heal 6 HP.",
     "rarity": "STARTER",
-    "champion_id": "rift_walker"
+    "trigger": "on_victory",
+    "effect": {"type": "heal", "amount": 6}
   },
   {
-    "id": "herald_crown",
-    "relic_name": "Herald Crown",
-    "description": "At the start of each combat, apply 1 Vulnerable to all enemies.",
-    "flavor_text": "The crown speaks to those willing to listen.",
-    "rarity": "STARTER",
-    "champion_id": "void_herald"
-  },
-  {
-    "id": "loom_of_chaos",
-    "relic_name": "Loom of Chaos",
-    "description": "Whenever you play a Power card, draw 1 card.",
-    "flavor_text": "Its threads extend through every possible future.",
-    "rarity": "STARTER",
-    "champion_id": "entropy_weaver"
-  },
-  {
-    "id": "null_core",
-    "relic_name": "Null Core",
-    "description": "Start each combat with 4 extra Block.",
-    "flavor_text": "A fragment of absolute nothingness made solid.",
-    "rarity": "STARTER",
-    "champion_id": "null_sovereign"
-  },
-  {
-    "id": "star_compass",
-    "relic_name": "Star Compass",
-    "description": "Gain 5 Gold after each combat.",
-    "flavor_text": "Points toward fortune, not north.",
+    "id": "cracked_core",
+    "name": "Cracked Core",
+    "description": "At the start of each turn, gain 1 Energy.",
     "rarity": "COMMON",
-    "champion_id": ""
+    "trigger": "on_turn_start",
+    "effect": {"type": "gain_energy", "amount": 1}
   },
   {
-    "id": "rift_crystal",
-    "relic_name": "Rift Crystal",
-    "description": "When you draw your 3rd card each turn, gain 1 Energy.",
-    "flavor_text": "Crystallised potential harvested from a collapsed dimension.",
+    "id": "void_crystal",
+    "name": "Void Crystal",
+    "description": "At the start of each turn, gain 2 Block.",
     "rarity": "COMMON",
-    "champion_id": ""
+    "trigger": "on_turn_start",
+    "effect": {"type": "gain_block", "amount": 2}
   },
   {
-    "id": "void_lantern",
-    "relic_name": "Void Lantern",
-    "description": "At the start of each combat, draw 1 extra card.",
-    "flavor_text": "It illuminates darkness that shouldn't exist.",
+    "id": "shadow_pendant",
+    "name": "Shadow Pendant",
+    "description": "Whenever you play a card, heal 1 HP.",
+    "rarity": "UNCOMMON",
+    "trigger": "on_card_played",
+    "effect": {"type": "heal", "amount": 1}
+  },
+  {
+    "id": "iron_will",
+    "name": "Iron Will",
+    "description": "At the start of each turn, gain 1 Strength.",
+    "rarity": "UNCOMMON",
+    "trigger": "on_turn_start",
+    "effect": {"type": "gain_strength", "amount": 1}
+  },
+  {
+    "id": "ancient_tome",
+    "name": "Ancient Tome",
+    "description": "At the start of each turn, draw 1 extra card.",
+    "rarity": "UNCOMMON",
+    "trigger": "on_turn_start",
+    "effect": {"type": "draw_card", "amount": 1}
+  },
+  {
+    "id": "gold_idol",
+    "name": "Gold Idol",
+    "description": "At the end of combat, gain 20 gold.",
     "rarity": "COMMON",
-    "champion_id": ""
+    "trigger": "on_victory",
+    "effect": {"type": "gain_gold", "amount": 20}
   },
   {
-    "id": "eldritch_tome",
-    "relic_name": "Eldritch Tome",
-    "description": "Whenever you exhaust a card, deal 3 damage to a random enemy.",
-    "flavor_text": "The words change every time you read it.",
-    "rarity": "UNCOMMON",
-    "champion_id": ""
-  },
-  {
-    "id": "paradox_coin",
-    "relic_name": "Paradox Coin",
-    "description": "Gain 25 Gold. Whenever you gain Gold, gain 1 less.",
-    "flavor_text": "Gives generously, then keeps taking.",
-    "rarity": "UNCOMMON",
-    "champion_id": ""
-  },
-  {
-    "id": "cosmic_anchor",
-    "relic_name": "Cosmic Anchor",
-    "description": "At the start of your turn, gain 2 Block.",
-    "flavor_text": "Keeps you tethered when the void wants to pull you in.",
-    "rarity": "UNCOMMON",
-    "champion_id": ""
-  },
-  {
-    "id": "abyssal_eye",
-    "relic_name": "Abyssal Eye",
-    "description": "You can see enemy intent 1 turn ahead.",
-    "flavor_text": "It never blinks.",
+    "id": "void_heart",
+    "name": "Void Heart",
+    "description": "At the start of each turn, heal 2 HP.",
     "rarity": "RARE",
-    "champion_id": ""
+    "trigger": "on_turn_start",
+    "effect": {"type": "heal", "amount": 2}
   },
   {
-    "id": "entropy_gem",
-    "relic_name": "Entropy Gem",
-    "description": "Your first Attack card each turn deals 5 extra damage.",
-    "flavor_text": "Disorder made crystalline.",
-    "rarity": "RARE",
-    "champion_id": ""
-  },
-  {
-    "id": "void_chalice",
-    "relic_name": "Void Chalice",
-    "description": "Heal 3 HP after every combat.",
-    "flavor_text": "Never empty, never full.",
+    "id": "plasma_shard",
+    "name": "Plasma Shard",
+    "description": "Whenever you play a card, gain 1 Block.",
     "rarity": "COMMON",
-    "champion_id": ""
+    "trigger": "on_card_played",
+    "effect": {"type": "gain_block", "amount": 1}
   },
   {
-    "id": "shattered_reality",
-    "relic_name": "Shattered Reality",
-    "description": "Boss Relic. Start each act with 1 extra permanent Energy.",
-    "flavor_text": "Reality was merely a suggestion.",
+    "id": "rift_lens",
+    "name": "Rift Lens",
+    "description": "At the start of each turn, draw 1 card.",
+    "rarity": "COMMON",
+    "trigger": "on_turn_start",
+    "effect": {"type": "draw_card", "amount": 1}
+  },
+  {
+    "id": "champions_trophy",
+    "name": "Champion's Trophy",
+    "description": "After each victory, gain 30 gold.",
+    "rarity": "RARE",
+    "trigger": "on_victory",
+    "effect": {"type": "gain_gold", "amount": 30}
+  },
+  {
+    "id": "void_anchor",
+    "name": "Void Anchor",
+    "description": "Increase max HP by 10.",
+    "rarity": "UNCOMMON",
+    "trigger": "on_obtain",
+    "effect": {"type": "max_hp_up", "amount": 10}
+  },
+  {
+    "id": "spirit_pouch",
+    "name": "Spirit Pouch",
+    "description": "Whenever you play a card, gain 1 Energy.",
+    "rarity": "RARE",
+    "trigger": "on_card_played",
+    "effect": {"type": "gain_energy", "amount": 1}
+  },
+  {
+    "id": "battle_standard",
+    "name": "Battle Standard",
+    "description": "At the start of each turn, gain 2 Strength.",
     "rarity": "BOSS",
-    "champion_id": ""
+    "trigger": "on_turn_start",
+    "effect": {"type": "gain_strength", "amount": 2}
   },
   {
-    "id": "null_fragment",
-    "relic_name": "Null Fragment",
-    "description": "Event Relic. Once per combat, when you would die, heal to 1 HP instead.",
-    "flavor_text": "Not even death is certain in the void.",
-    "rarity": "EVENT",
-    "champion_id": ""
+    "id": "eternal_flame",
+    "name": "Eternal Flame",
+    "description": "At the end of combat, heal 15 HP.",
+    "rarity": "BOSS",
+    "trigger": "on_victory",
+    "effect": {"type": "heal", "amount": 15}
   }
 ]

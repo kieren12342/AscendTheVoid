@@ -3,6 +3,7 @@ extends Node2D
 @onready var map_vbox: VBoxContainer = $UI/Root/MapScroll/MapVBox
 @onready var act_label: Label = $UI/Root/ActLabel
 @onready var node_info_label: Label = $UI/Root/NodeInfoLabel
+@onready var relic_bar: Label = $UI/Root/RelicBar
 
 const NODE_COLORS := {
 	"BATTLE": Color(0.8, 0.2, 0.2),
@@ -23,12 +24,29 @@ const NODE_ICONS := {
 
 func _ready() -> void:
 	EventBus.map_node_selected.connect(_on_node_selected)
+	# Give starter relic if no relics yet
+	if RelicManager.active_relics.is_empty():
+		var starter_relics := {
+			"void_warden": "void_crystal",
+			"shadow_lurker": "shadow_pendant",
+			"plasma_weaver": "plasma_shard",
+			"rift_shaper": "rift_lens",
+		}
+		var starter := starter_relics.get(GameManager.champion_id, "burning_blood")
+		RelicManager.add_relic(starter)
 	var map := MapGenerator.generate(GameManager.run_seed)
 	_build_map_ui(map)
 
 func _build_map_ui(map: Dictionary) -> void:
 	for child in map_vbox.get_children():
 		child.queue_free()
+
+	# Update relic display
+	var relic_names := RelicManager.active_relics.map(func(r): return r.get("name", r.get("id", "Unknown")))
+	if relic_names.is_empty():
+		relic_bar.text = "Relics: None"
+	else:
+		relic_bar.text = "Relics: " + ", ".join(relic_names)
 
 	var floors: Array = map.get("floors", [])
 	# Render floors bottom-to-top (floor 0 at bottom)
